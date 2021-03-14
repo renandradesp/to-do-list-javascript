@@ -15,8 +15,10 @@ const options = {
     month: 'short',
     day: 'numeric'
 }
+
 const today = new Date();
 date.innerHTML = today.toLocaleDateString('en-US', options);
+
 
 //Add to do function
 function addToDo(toDo) {
@@ -32,7 +34,12 @@ function addToDo(toDo) {
     list.insertAdjacentHTML(position, item);
 }
 
-const test = 'test'
-addToDo(test);
-alert('qualquer')
-console.log(test)
+//Add an item to the list
+document.addEventListener('keyup', function (event) {
+    if (event.keyCode == 13) {
+        const toDo = input.value;
+        if (toDo) {
+            addToDo(toDo);
+        }
+    }
+});
