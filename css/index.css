@@ -1,0 +1,12 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+    font-family: "Titillium Web", sans-serif;
+}
+
+.container {
+    width: 380px;
+    padding: 10px;
+    margin: 0 auto;
+}
